@@ -16,6 +16,7 @@ function addInArray() {
         vote(this);
     });
     document.getElementById("allButtons").appendChild(newButton);
+    adjustMainDivHeight();
     
 }
 
@@ -28,4 +29,23 @@ function voteButton(button) {
     let currentVotes = parseInt(button.getAttribute('data-votes'));
     button.setAttribute('data-votes', currentVotes + 1);
     button.textContent = `${button.textContent.split(' ')[0]} (votes ${currentVotes + 1})`;
+}
+function adjustMainDivHeight() {
+    var mainDiv = document.querySelector('.mainDiv');
+    var buttons = mainDiv.querySelectorAll('button');
+
+    
+    var totalButtonHeight = 0;
+    buttons.forEach(function(button) {
+        totalButtonHeight += button.offsetHeight; 
+    });
+
+    
+    var totalButtonPadding = (buttons.length - 1) * parseInt(getComputedStyle(buttons[0]).marginBottom);
+
+    
+    var newHeight = totalButtonHeight + totalButtonPadding + parseFloat(getComputedStyle(mainDiv).borderWidth) * 2;
+
+   
+    mainDiv.style.height = newHeight + 'px';
 }
