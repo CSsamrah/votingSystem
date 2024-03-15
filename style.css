@@ -1,0 +1,78 @@
+body{
+    background-image: url("./vote.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+.mainText{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 2vh;
+    
+
+}
+#friend{
+    height: 5vh;
+    width: 20vw;
+    border-radius: 10px;
+}
+.mainDiv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px 15px 10px 15px;
+    border-color: rgb(89, 82, 82);
+    border-style: solid;
+    height:92vh;
+    width: 40vw;
+    margin: auto;
+    margin-top: 5vh;
+    backdrop-filter: blur(15px);
+    background-color: rgba(189, 98, 137, 0.5);
+}
+#submitbutton{
+    height: 6vh;
+    width: 10vw;
+    border-radius: 15px;
+    font-weight: 700;
+    background-color: rgb(206, 145, 131);
+    
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    text-align: center;
+}
+#allButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 3vh;
+}
+button{
+    height: 8vh;
+    width: 32vw;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+@media only screen and (min-width:320px) and (max-width:480px) {
+    .mainDiv{
+        width:63vw;
+    }
+    #submitbutton{
+        width:22vw;
+    }
+    #friend{
+        width:30vw;
+    }
+    button{
+        width:56vw;
+    }
+    
+}
+
