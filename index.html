@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="mainDiv">
+        <h2>Add Or Cast Your Vote</h2>
+        <div class="mainText">
+            <form>
+                <input type="text" name="person" id="friend" placeholder=" Enter Name">
+            </form>
+            <input type="submit" value="Insert" id="submitbutton" onclick="addInArray()">
+        </div>
+        <div id="allButtons" >
+            <button data-votes="0" onclick="voteButton(this)" >Imran (votes 0)</button>
+            <button data-votes="0" onclick="voteButton(this)">Talha (votes 0)</button>
+            <button data-votes="0" onclick="voteButton(this)">Huzaifa (votes 0)</button>
+            
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
